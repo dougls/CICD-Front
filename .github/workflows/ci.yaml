@@ -26,9 +26,4 @@ jobs:
         run: htmlhint "**/*.html"
 
       - name: Validar CSS
-        run: |
-          echo '{"extends": "stylelint-config-standard"}' > .stylelintrc.json
-          npx stylelint "**/*.css" || echo "Nenhum arquivo CSS encontrado ou erro no lint."
-
-      - name: Validar CSS
         run: stylelint "**/*.css"
